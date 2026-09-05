@@ -45,9 +45,8 @@
       var sb = await waitForSupabase();
       var { error } = await sb.auth.signInWithOAuth({
         provider: provider,
-        options: {
-          redirectTo: 'http://localhost:3000'
-        }
+        options: { redirectTo: 'https://logshare.onrender.com' }
+
       });
       if (error) alert(error.message);
     }

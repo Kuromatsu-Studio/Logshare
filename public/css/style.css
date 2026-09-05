@@ -1,8 +1,4 @@
-/* ============================================
-   LOGSHARE — Terminal Modern Theme
-   3 colors: Green (primary), Cyan (secondary), Amber (alert)
-   ============================================ */
-
+/* LOGSHARE, Terminal Modern Theme 3 colors: Green (primary), Cyan (secondary), Amber (alert)*/
 :root {
   /* Dark mode (default) */
   --bg: #09090b;
@@ -512,7 +508,7 @@ footer {
   background: var(--text-dim);
 }
 
-/* Log level colors — these target the content inside the line */
+/* Log level colors, these target the content inside the line */
 .log-line.level-error .line-content,
 .log-line.level-fatal .line-content {
   color: var(--error);

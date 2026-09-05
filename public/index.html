@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logshare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <nav>
+    <span class="nav-brand">Logshare</span>
+    <span class="nav-links" id="nav-auth">
+      <!-- Filled by auth.js -->
+    </span>
+  </nav>
+
+  <header class="hero">
+    <h1>Share logs without the mess</h1>
+    <p>Paste your logs, get a shareable link. Filter by severity, search, and collaborate.</p>
+    <div class="badges">
+      <span><i data-lucide="zap"></i> Instant links</span>
+      <span><i data-lucide="shield"></i> No signup required</span>
+      <span><i data-lucide="link"></i> Auto-expires in 24h</span>
+    </div>  
+  </header>
+
+  <main class="container">
+    <div class="card">
+      <input type="text" id="title" placeholder="Optional title (e.g. 'Production crash')...">
+      <textarea id="content" placeholder="Paste your logs here..."></textarea>
+      <div class="card-footer">
+        <span class="meta" id="char-count">0 characters</span>
+        <button id="submit-btn" class="btn btn-primary">Create Shareable Link</button>
+      </div>
+      <div id="error" class="error hidden"></div>
+    </div>
+  </main>
+
+  <section class="section">
+    <h2>How it works</h2>
+    <div class="grid">
+      <div class="cell">
+        <div class="cell-num">01</div>
+        <h3>Paste your logs</h3>
+        <p>Drop any text — structured logs, stack traces, console output. We handle it.</p>
+      </div>
+      <div class="cell">
+        <div class="cell-num">02</div>
+        <h3>Get a link</h3>
+        <p>One click, one URL. Share it in Slack, GitHub, email, or WhatsApp.</p>
+      </div>
+      <div class="cell">
+        <div class="cell-num">03</div>
+        <h3>Filter & search</h3>
+        <p>Recipients can filter by ERROR/WARN/INFO, search keywords, and copy raw text.</p>
+      </div>
+    </div>
+  </section>
+
+    <footer>
+    <div>
+        Logshare &copy; 2026 Kuromatsu Studio
+      <span style="margin-left: 1rem;">
+        <a href="mailto:kuromatsustudio@gmail.com">Contact</a>
+        <a href="https://github.com/BananaChristian/logshare" target="_blank" style="margin-left: 0.5rem;">GitHub</a>
+      </span>
+    </div>
+  </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="/js/config.js"></script>
+  <script src="/js/auth.js"></script>
+  <script src="/js/app.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
